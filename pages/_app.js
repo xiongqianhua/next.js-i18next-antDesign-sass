@@ -1,17 +1,12 @@
 import React,{ Suspense }  from 'react';
 import { ConfigProvider } from 'antd';
-import { appWithTranslation } from 'next-i18next';
-import nextI18NextConfig from '../next-i18next.config.mjs'
-import theme from '@/theme/themeConfig';
+import { appWithTranslation } from 'next-i18next'
 import "@/styles/global.scss";
 
-const App = ({ Component, pageProps }) => (
-  <Suspense fallback="loading">
-    <ConfigProvider theme={theme}>
-        <Component {...pageProps} />
-    </ConfigProvider>
-  </Suspense>
+const MyApp = ({ Component, pageProps }) => (
+  <ConfigProvider>
+    <Component {...pageProps} />
+  </ConfigProvider>
 );
-
-export default appWithTranslation(App,nextI18NextConfig);
+export default appWithTranslation(MyApp)
 

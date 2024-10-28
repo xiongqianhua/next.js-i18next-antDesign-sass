@@ -1,18 +1,61 @@
-import React from 'react';
+import Document,{
+  Html,
+  Head,
+  Main,
+  NextScript,
+} from 'next/document'
+import i18nextConfig from '@/next-i18next.config'
+import { useTranslation } from 'next-i18next'
 import { createCache, extractStyle, StyleProvider } from '@ant-design/cssinjs';
-import Document, { Head, Html, Main, NextScript } from 'next/document';
-import i18nextConfig from '../next-i18next.config.mjs';
-const currentLocale = i18nextConfig.defaultLocale;
 
-const MyDocument = () => (
-  <Html lang={currentLocale}>
-    <Head />
-    <body>
-      <Main />
-      <NextScript />
-    </body>
-  </Html>
-);
+export default function MyDocument(props) {
+  const { t } = useTranslation(['common'])
+
+  const currentLocale =
+    props.__NEXT_DATA__.query.locale ||
+    i18nextConfig.i18n.defaultLocale
+  const meta = {
+    url: "https://petmindreader.com",
+    image: "https://petmindreader.com/cat.png",
+    socialImageURL: "https://petmindreader.com/cat.png",
+    title: t('title'),
+    description: t('description'),
+  };
+  return (
+    <Html lang={currentLocale}>
+      <Head>
+        <meta property="og:title" content={meta.title} key="title" />
+        <meta property="og:description" content={meta.description} key="description" />
+
+        <meta name="title" content={meta.title} />
+        <meta name="description" content={meta.description} />
+        <meta name="author" content="https://petmindreader.com" />
+        <meta name="keywords" content="Cat, mind reader" />
+        <meta name="generator" content="https://petmindreader.com" />
+
+        <meta property="og:type" content='website' />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:url" content={meta.url} />
+        <meta property="og:image" content={meta.socialImageURL} />
+
+        <meta property="twitter:card" content='summary_large_image' />
+        <meta property="twitter:title" content={meta.title} />
+        <meta property="twitter:description" content={meta.description} />
+        <meta property="twitter:url" content={meta.url} />
+        <meta property="twitter:image" content={meta.socialImageURL} />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  )
+
+}
 
 MyDocument.getInitialProps = async (ctx) => {
   const cache = createCache();
@@ -38,5 +81,3 @@ MyDocument.getInitialProps = async (ctx) => {
     ),
   };
 };
-
-export default MyDocument;

@@ -1,0 +1,16 @@
+{
+  "languages": [
+    {
+      "key": "en",
+      "label": "English"
+    },
+    {
+      "key": "zh",
+      "label": "简体中文"
+    },
+    {
+      "key": "fr",
+      "label": "Franch"
+    }
+  ]
+}

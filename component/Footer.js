@@ -1,36 +1,31 @@
-/*
- * @Author: qianhua.xiong
- */
+import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
+import LanguageSwitchLink from './LanguageSwitchLink'
 import pkg from 'next-i18next/package.json'
-import { useTranslation, Trans } from 'next-i18next'
+import pkgLD from 'next-language-detector/package.json'
 
+import i18nextConfig from '@/next-i18next.config'
 
 export const Footer = () => {
+  const router = useRouter()
   const { t } = useTranslation('footer')
+  const currentLocale =
+    router.query.locale || i18nextConfig.i18n.defaultLocale
 
   return (
     <footer>
       <p>{t('description')}</p>
-      <p>next-i18next v{pkg.version}</p>
-      <p
-        style={{
-          fontSize: 'smaller',
-          fontStyle: 'italic',
-          marginTop: 20,
-        }}
-      >
-        <Trans i18nKey="helpLocize" t={t}>
-          With using
-          <a href="https://locize.com" target="_new">
-            locize
-          </a>
-          you directly support the future of
-          <a href="https://www.i18next.com" target="_new">
-            i18next
-          </a>
-          .
-        </Trans>
+      <p>
+        <span style={{ fontSize: 'small', lineHeight: '4.65em' }}>
+          {t('change-locale')}
+        </span>
+        {i18nextConfig.i18n.locales.map(locale => {
+          if (locale === currentLocale) return null
+          return <LanguageSwitchLink locale={locale} key={locale} />
+        })}
       </p>
+      <p>next-i18next v{pkg.version}</p>
+      <p>next-language-detector v{pkgLD.version}</p>
     </footer>
   )
 }

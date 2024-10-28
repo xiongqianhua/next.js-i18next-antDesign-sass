@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "vendor-chunks/next-language-detector";
+exports.ids = ["vendor-chunks/next-language-detector"];
+exports.modules = {
+
+/***/ "./node_modules/next-language-detector/package.json":
+/*!**********************************************************!*\
+  !*** ./node_modules/next-language-detector/package.json ***!
+  \**********************************************************/
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"name":"next-language-detector","version":"1.1.0","description":"This package helps to handle language detection in next.js when using static servers only.","keywords":["i18next","i18next-languageDetector","next","next.js","nextjs"],"homepage":"https://github.com/i18next/next-language-detector","repository":{"type":"git","url":"git@github.com:i18next/next-language-detector.git"},"bugs":{"url":"https://github.com/i18next/next-language-detector/issues"},"type":"module","main":"./dist/cjs/index.js","module":"./dist/esm/index.js","browser":"./dist/umd/i18nextNextLanguageDetector.js","types":"./index.d.mts","exports":{"./package.json":"./package.json",".":{"types":{"require":"./index.d.ts","import":"./index.d.mts"},"require":"./dist/cjs/index.js","default":"./dist/esm/index.js"},"./cjs":{"types":"./index.d.ts","default":"./dist/cjs/index.js"},"./esm":{"types":"./index.d.mts","default":"./dist/esm/index.js"},"./src":{"default":"./src/index.js"}},"scripts":{"lint:javascript":"eslint .","lint:typescript":"eslint -c .ts.eslintrc *.d.ts *.d.mts test/types/**/*.test-d.ts","lint":"npm run lint:javascript && npm run lint:typescript","build":"rm -rf dist && rollup -c && echo \'{\\"type\\":\\"commonjs\\"}\' > dist/cjs/package.json","test:typescript":"tsd","test":"npm run lint && mocha --colors --reporter spec --recursive test/*.js","test:all":"npm run test && npm run test:typescript","preversion":"npm run test && npm run build && git push","postversion":"git push && git push --tags"},"license":"MIT","dependencies":{"@babel/runtime":"7.16.7","i18next-browser-languagedetector":"7.2.0"},"devDependencies":{"@babel/core":"7.16.7","@babel/plugin-transform-runtime":"7.16.8","@babel/preset-env":"7.16.8","@types/mocha":"9.0.0","@typescript-eslint/eslint-plugin":"5.9.1","@typescript-eslint/parser":"5.9.1","babel-plugin-add-module-exports":"1.0.4","eslint":"7.32.0","eslint-config-standard":"16.0.3","eslint-plugin-import":"2.25.4","eslint-plugin-node":"11.1.0","eslint-plugin-promise":"5.2.0","eslint-plugin-require-path-exists":"1.1.9","eslint-plugin-standard":"5.0.0","mocha":"9.1.3","rollup":"2.63.0","rollup-plugin-babel":"4.4.0","rollup-plugin-commonjs":"10.1.0","rollup-plugin-node-resolve":"5.2.0","rollup-plugin-terser":"7.0.2","should":"13.2.3","sinon":"12.0.1","tsd":"0.19.1","typescript":"4.5.4"},"tsd":{"directory":"test/types"}}');
+
+/***/ })
+
+};
+;
