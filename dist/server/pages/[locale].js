@@ -414,7 +414,7 @@ module.exports = require("zlib");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/@ant-design","vendor-chunks/rc-util","vendor-chunks/@babel","vendor-chunks/next","vendor-chunks/antd","vendor-chunks/@swc","vendor-chunks/rc-picker","vendor-chunks/rc-pagination","vendor-chunks/next-i18next","vendor-chunks/next-language-detector"], () => (__webpack_exec__("./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES&page=%2F%5Blocale%5D&preferredRegion=&absolutePagePath=.%2Fpages%2F%5Blocale%5D%2Findex.js&absoluteAppPath=private-next-pages%2F_app&absoluteDocumentPath=private-next-pages%2F_document&middlewareConfigBase64=e30%3D!")));
+var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/@ant-design","vendor-chunks/rc-util","vendor-chunks/@babel","vendor-chunks/antd","vendor-chunks/next","vendor-chunks/@swc","vendor-chunks/rc-picker","vendor-chunks/rc-pagination","vendor-chunks/next-language-detector","vendor-chunks/next-i18next"], () => (__webpack_exec__("./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES&page=%2F%5Blocale%5D&preferredRegion=&absolutePagePath=.%2Fpages%2F%5Blocale%5D%2Findex.js&absoluteAppPath=private-next-pages%2F_app&absoluteDocumentPath=private-next-pages%2F_document&middlewareConfigBase64=e30%3D!")));
 module.exports = __webpack_exports__;
 
 })();
