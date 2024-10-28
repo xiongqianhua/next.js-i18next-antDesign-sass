@@ -10,7 +10,6 @@ import { Radio } from 'antd';
 
 const Homepage = () => {
   const { t } = useTranslation(['common', 'footer'])
-  console.log(t('h1'),t('title'),'t33333')
   const [value, setValue] = useState(1);
   const onChange = (e) => {
     console.log('radio checked', e.target.value);
@@ -19,7 +18,7 @@ const Homepage = () => {
   return (
     <>
       <main>
-        {/* <Header heading={t('h1')} title={t('title')} /> */}
+        <Header heading={t('h1')} title={t('title')} />
         <div>
           <Link href="/second-page">
             <button type="button">{t('to-second-page')}</button>

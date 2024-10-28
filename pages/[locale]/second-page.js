@@ -14,14 +14,14 @@ const SecondPage = ({ someOtherData }) => {
 
   return (
     <>
-      {/* <main>
+      <main>
         <Header heading={t('h1')} title={t('title')} />
         <Link href="/">
           <button type="button">{t('common:back-to-home')}</button>
         </Link>
         <p>{someOtherData}</p>
       </main>
-      <Footer /> */}
+      <Footer />
     </>
   )
 }
