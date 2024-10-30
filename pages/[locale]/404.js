@@ -1,30 +1,21 @@
-import { useTranslation } from 'next-i18next'
 import { getStaticPaths, makeStaticProps } from '@/lib/getStatic'
-
-import { Header } from '@/component/Header'
-import { Footer } from '@/component/Footer'
-
 import Link from '@/component/Link'
+import React from 'react';
+import { Result,Button} from 'antd';
+import { useTranslation } from 'next-i18next'
 
 const Homepage = () => {
-  const { t } = useTranslation(['404', 'common', 'footer'])
-
-  return (
-    <>
-      {/* <main>
-        <Header heading={t('h1')} title={t('title')} />
-        <div>
-          <Link href="/">
-            <button type="button">{t('common:back-to-home')}</button>
-          </Link>
-        </div>
-      </main>
-      <Footer /> */}
-    </>
-  )
+  const { t } = useTranslation(['404','common'])
+  return (<Result
+    status="404"
+    title={t('title')}
+    subTitle={t('h1')}
+    extra={<Link href="/">
+      <Button type="button">{t('common:back-to-home')}</Button>
+    </Link>}
+  />)
 }
+export default Homepage;
 
-export default Homepage
-
-const getStaticProps = makeStaticProps(['404', 'common', 'footer'])
+const getStaticProps = makeStaticProps(['404', 'common'])
 export { getStaticPaths, getStaticProps }

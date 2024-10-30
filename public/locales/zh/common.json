@@ -1,0 +1,19 @@
+{
+  "back-to-home": "回到家",
+  "error-with-status": "服务器发生 {{statusCode}} 错误",
+  "error-without-status": "服务器发生错误",
+  "h1": "一个简单的例子",
+  "title": "首页 |\n下一个-i18下一个",
+  "to-second-page": "到第二页",
+  "description": "Next.js i18n 国际化模版",
+
+  "systemTitle":"SCM管理系统",
+  "Username":"账户",
+  "Password":"密码",
+  "p1":"请输入密码！",
+  "p2":"请输入账户！",
+  "p3":"登录",
+  "p4":"牛马专用",
+  "p5":"账户或者密码错误！",
+  "languageSwitch":"语言切换:"
+}

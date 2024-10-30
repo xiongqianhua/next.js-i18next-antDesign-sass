@@ -1,3 +1,3 @@
-import Homepage, { getStaticProps } from './[locale]/index'
-export default Homepage
+import Indexpage, { getStaticProps } from './[locale]/index'
+export default Indexpage
 export { getStaticProps }

@@ -5,5 +5,15 @@
   "h1": "A simple example",
   "title": "Home | next-i18next",
   "to-second-page": "To second page",
-  "description": "Next.js i18n international template"
+  "description": "Next.js i18n international template",
+
+  "systemTitle":"SCM Manage System",
+  "Username":"Username",
+  "Password":"Password",
+  "p1":"Please input your password!",
+  "p2":"Please input your username!",
+  "p3":"login in",
+  "p4":"Exclusively for cattle and horses",
+  "p5":"Username or Password is error!",
+  "languageSwitch":"language switch:"
 }
