@@ -6,7 +6,7 @@ import {
   getI18nProps,
 } from '@/lib/getStatic'
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
-import { AppstoreAddOutlined,WechatOutlined, AppstoreOutlined, HomeOutlined } from '@ant-design/icons';
+import { AppstoreAddOutlined,WechatOutlined, AppstoreOutlined, HomeOutlined,UsergroupAddOutlined } from '@ant-design/icons';
 import ContentComponents from '@/component/content';
 import { LogoutOutlined } from '@ant-design/icons';
 import { useRouter } from 'next/router';
@@ -38,6 +38,11 @@ const SecondPage = ({ someOtherData }) => {
     key: '3',
     label: t('menuList4'),
     icon: <WechatOutlined />,
+  },
+  {
+    key: '4',
+    label: t('menuList5'),
+    icon: <UsergroupAddOutlined />,
   }
   ]
   const onSelect = (e) => {

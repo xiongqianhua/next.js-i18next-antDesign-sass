@@ -3,6 +3,7 @@ import BillBords from './billboards';
 import EnvEuipment from './envManage/envEuipment';
 import App from './app';
 import Xiaochengxu from './xiaochengxu';
+import UserList from './userList';
 import { Skeleton } from 'antd';
 const ContentComponents = (props)=>{
     console.log(props)
@@ -15,6 +16,8 @@ const ContentComponents = (props)=>{
         component = <App/>
     }else if(props.type.includes(3)){
         component = <Xiaochengxu/>
+    }else if(props.type.includes(4)){
+        component = <UserList/>
     }
     return  component
 }

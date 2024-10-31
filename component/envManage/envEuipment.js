@@ -84,7 +84,7 @@ const envEuipment = (props) => {
       key: 'action',
       render: (_, record) => (
         <Space size="middle">
-          {/* <a onClick={()=> envDetails(record)}>详情 </a> */}
+          <a onClick={()=> envDetails(record)}>版本</a>
           <a type='edit' onClick={()=> editEnvForm(record)}>编辑</a>
         </Space>
       ),

@@ -12,11 +12,6 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/[locale]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/[locale].js"
-    ],
     "/[locale]/home": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
