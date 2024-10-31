@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import BillBords from './billboards';
-import EnvEuipment from './envEuipment';
+import EnvEuipment from './envManage/envEuipment';
 import App from './app';
 import Xiaochengxu from './xiaochengxu';
 import { Skeleton } from 'antd';

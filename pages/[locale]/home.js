@@ -6,6 +6,7 @@ import {
   getI18nProps,
 } from '@/lib/getStatic'
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import { AppstoreAddOutlined,WechatOutlined, AppstoreOutlined, HomeOutlined } from '@ant-design/icons';
 import ContentComponents from '@/component/content';
 import { LogoutOutlined } from '@ant-design/icons';
 import { useRouter } from 'next/router';
@@ -17,28 +18,32 @@ const SecondPage = ({ someOtherData }) => {
   const { token: { colorBgContainer, borderRadiusLG } } = theme.useToken();
   const [select, setSelect] = useState([0]);
   const router = useRouter();
+  const locale = router.query.locale || i18nextConfig.i18n.defaultLocale
   const items = [{
-    key: 0,
+    key: '0',
     label: t('menuList1'),
+    icon: <HomeOutlined />,
   },
   {
-    key: 1,
+    key: '1',
     label: t('menuList2'),
+    icon: <AppstoreAddOutlined />,
   },
   {
-    key: 2,
+    key: '2',
     label: t('menuList3'),
+    icon: <AppstoreOutlined />,
   },
   {
-    key: 3,
+    key: '3',
     label: t('menuList4'),
+    icon: <WechatOutlined />,
   }
   ]
   const onSelect = (e) => {
     setSelect(e.key)
   }
   const loginOut = () => {
-    const locale = router.query.locale || i18nextConfig.i18n.defaultLocale
     router.push(`/${locale}/`)
   }
   return (
@@ -55,11 +60,11 @@ const SecondPage = ({ someOtherData }) => {
               alignItems: 'center',
             }}
           >
-            <div className="demo-logo" />
+            <div className="demo-logo"/>
             <Menu
               theme="dark"
               mode="horizontal"
-              defaultSelectedKeys={[0]}
+              defaultSelectedKeys={['0']}
               items={items}
               style={{
                 flex: 1,
